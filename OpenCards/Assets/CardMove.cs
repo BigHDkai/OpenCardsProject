@@ -1,35 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardMove : MonoBehaviour
 {
     // Start is called before the first frame update
-    int a = 10;
+    string state = "";
+    // Update is called once per frame
+
+    //int asd = 
     void Start()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CardsClick()
     {
-        
-    }
-
-    public void CardsUp()
-    {
-        
-        transform.position += new Vector3(0,a,0);
-        a -=10;
-    }
-
-    public void CardsShow()
-    {
-        if(a==-10)
+        if(state == "cardsup")
         {
-            transform.position = transform.parent.position;
+            CardsShow();
+        }else
+        {
+            CardsUp();
         }
+    }
+
+
+    void CardsUp()
+    {
+        transform.position += new Vector3(0,10,0);
+        state = "cardsup";
+        
+    }
+
+    void CardsShow()
+    {
+        transform.position = transform.parent.position;
+        this.GetComponentInChildren<Text>().enabled = true;
+        transform.SetSiblingIndex(this.transform.parent.childCount-1);
     }
 
 

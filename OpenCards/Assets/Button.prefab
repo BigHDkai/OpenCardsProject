@@ -91,7 +91,6 @@ GameObject:
   - component: {fileID: 3389455063298452081}
   - component: {fileID: 9027360254851502093}
   - component: {fileID: 4617585989955715503}
-  - component: {fileID: 7756590168275465192}
   - component: {fileID: -4004902813195075750}
   m_Layer: 5
   m_Name: Button
@@ -202,7 +201,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7756590168275465192}
+      - m_Target: {fileID: -4004902813195075750}
         m_TargetAssemblyTypeName: CardMove, Assembly-CSharp
         m_MethodName: CardsClick
         m_Mode: 1
@@ -214,18 +213,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &7756590168275465192
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9098001720501647661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d641b8d7781424c9beadb2b8fd0bfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &-4004902813195075750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,3 +225,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d641b8d7781424c9beadb2b8fd0bfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myImage: {fileID: 9027360254851502093}

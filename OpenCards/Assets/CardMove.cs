@@ -7,6 +7,9 @@ public class CardMove : MonoBehaviour
 {
     // Start is called before the first frame update
     string state = "";
+
+    [SerializeField]  Image myImage;   
+
     // Update is called once per frame
 
     //int asd = 
@@ -37,8 +40,10 @@ public class CardMove : MonoBehaviour
     void CardsShow()
     {
         transform.position = transform.parent.position;
-        this.GetComponentInChildren<Text>().enabled = true;
+       // this.GetComponentInChildren<Text>().enabled = true;
         transform.SetSiblingIndex(this.transform.parent.childCount-1);
+        string PokeImgCount = "PokeImage/" + this.GetComponentInChildren<Text>().text;
+        myImage.sprite = Resources.Load<Sprite>(PokeImgCount);
     }
 
 
